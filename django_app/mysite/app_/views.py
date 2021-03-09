@@ -1,14 +1,13 @@
 from django.shortcuts import render
-
-#from django.http import HttpResponse
-#import datetime
-
+from django.http import HttpResponse
+from django.template import Template, Context 
 
 def index(request):
-  return render(request, 'templates/index.html')
+  return render(request, 'index.html')
 
-#def current_datetime(request):
- # now = datetime.datetime.now()
- # html = "Now, it is %"% now 
- # return HttpResponse(html)
+def form(request):
+  return render(request, 'form.html')
 
+def form_1(request):
+  mensaje = "Artículo buscado: ", (request.GET["numero_1"])
+  return HttpResponse(mensaje)
