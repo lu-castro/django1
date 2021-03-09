@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Lucia Castro">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'index.css' %}">
+  <title>Document</title>
+
+</head>
+<body>
+
+  <div class="welcome">Welcome</div>
+  
+  <nav class="navbar">
+    <ul class="items_ul">
+      <li>
+        <a href="#">Profile</a>
+      </li>
+      <li>
+        <a href="#">Form</a>
+      </li>
+    </ul>
+  </nav>
+
+  {% block content %}
+
+  <form action="/form_1/" method="GET">
+    Inserte un numero aqui : <input type="text" name="numero_1"><br>
+    <button type="submit">Enviar</button>
+  </form>
+
+  {% endblock %}
+
+</body>
+</html>

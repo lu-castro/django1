@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from templates.templates import index
+from app_.views import index, form, form_1
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('templates/', index),
+    path('', index),
+    path('form/', form),
+    path('form_1/', form_1), 
 ]
